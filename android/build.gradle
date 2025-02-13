@@ -17,10 +17,6 @@ subprojects {
     project.evaluationDependsOn(":app")
 }
 
-buildFeatures {
-       buildConfig = true
-   }
-
 tasks.register("clean", Delete) {
     delete rootProject.buildDir
 }
