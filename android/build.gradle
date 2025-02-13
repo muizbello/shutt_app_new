@@ -12,13 +12,7 @@ subprojects {
 subprojects {
     project.evaluationDependsOn(":app")
 }
-subprojects {
-    afterEvaluate { project ->
-        if (project.hasProperty("android")) {
-            project.android.buildFeatures.buildConfig = true
-        }
-    }
-}
+
 
 tasks.register("clean", Delete) {
     delete rootProject.buildDir
