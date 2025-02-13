@@ -1,0 +1,6 @@
+cloud_firestore{
+
+buildFeatures {
+        buildConfig = true
+    }
+}
