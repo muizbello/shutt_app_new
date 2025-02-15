@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:shutt_app/styles/colors.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 
 class Home2 extends StatefulWidget {
