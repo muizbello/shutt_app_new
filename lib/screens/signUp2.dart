@@ -14,7 +14,7 @@ import 'package:firebase_admin/firebase_admin.dart';
 import '../widgets/headingText.dart';
 
 class SignUp2 extends StatefulWidget {
-  const SignUp2({Key? key}) : super(key: key);
+  const SignUp2({super.key});
 
   @override
   State<SignUp2> createState() => _SignUp2State();
@@ -71,7 +71,7 @@ class _SignUp2State extends State<SignUp2> {
                   Text(
                     "+233 ${auth.phoneNumController.text.substring(0, 2)} ${auth.phoneNumController.text.substring(2, 5)} ${auth.phoneNumController.text.trim().substring(5)}",
                     textAlign: TextAlign.left,
-                    style: TextStyle(color: appColors.darkGreen),
+                    style: const TextStyle(color: appColors.darkGreen),
                   ),
                   const SizedBox(
                     height: 18,

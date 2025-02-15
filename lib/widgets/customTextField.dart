@@ -11,7 +11,7 @@ class CustomTextField extends StatelessWidget {
   final bool hideText;
   final bool? autofocus;
   const CustomTextField(
-      {Key? key,
+      {super.key,
       required this.textController,
       required this.hintText,
       required this.onPressed,
@@ -19,8 +19,7 @@ class CustomTextField extends StatelessWidget {
       this.focusNode,
       this.autofocus,
       this.hideText = false,
-      this.textIcon})
-      : super(key: key);
+      this.textIcon});
 
   @override
   Widget build(BuildContext context) {
@@ -38,7 +37,7 @@ class CustomTextField extends StatelessWidget {
           fillColor: appColors.offWhite,
           filled: true,
           hintText: hintText,
-          hintStyle: TextStyle(color: appColors.textGrey)),
+          hintStyle: const TextStyle(color: appColors.textGrey)),
     );
   }
 }

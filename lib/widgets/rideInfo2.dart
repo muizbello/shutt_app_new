@@ -9,13 +9,12 @@ class RideInfo2 extends StatelessWidget {
   final String busRegistrationNumber;
   final double price;
   const RideInfo2(
-      {Key? key,
+      {super.key,
       required this.promptText,
       required this.pickUpPointText,
       required this.dropOffPointText,
       required this.price,
-      required this.busRegistrationNumber})
-      : super(key: key);
+      required this.busRegistrationNumber});
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +22,7 @@ class RideInfo2 extends StatelessWidget {
       padding: const EdgeInsets.all(16.0),
       child: Material(
         color: appColors.appWhite,
-        borderRadius: BorderRadius.all(Radius.circular(5)),
+        borderRadius: const BorderRadius.all(Radius.circular(5)),
         elevation: 2,
         child: Padding(
           padding: const EdgeInsets.all(16.0),

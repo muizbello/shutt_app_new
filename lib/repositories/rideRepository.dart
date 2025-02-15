@@ -8,9 +8,7 @@ class RideRepository {
   static RideRepository? _instance;
 
   static RideRepository? get instance {
-    if (_instance == null) {
-      _instance = RideRepository._();
-    }
+    _instance ??= RideRepository._();
     return _instance;
   }
 

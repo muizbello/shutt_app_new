@@ -3,7 +3,7 @@ import 'package:shutt_app/styles/colors.dart';
 import 'package:shutt_app/widgets/NavigationDrawer.dart' as nav;
 
 class Profile extends StatefulWidget {
-  const Profile({Key? key}) : super(key: key);
+  const Profile({super.key});
 
   @override
   State<Profile> createState() => _ProfileState();

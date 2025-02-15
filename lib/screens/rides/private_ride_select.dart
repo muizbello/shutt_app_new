@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:shutt_app/widgets/NavigationDrawer.dart' as nav;
 
 class PrivateRideSelect extends StatelessWidget {
-  const PrivateRideSelect({Key? key}) : super(key: key);
+  const PrivateRideSelect({super.key});
 
   @override
   Widget build(BuildContext context) {

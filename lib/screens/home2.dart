@@ -3,7 +3,7 @@ import 'package:shutt_app/styles/colors.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 
 class Home2 extends StatefulWidget {
-  const Home2({Key? key}) : super(key: key);
+  const Home2({super.key});
 
   @override
   State<Home2> createState() => _Home2State();
@@ -28,7 +28,7 @@ class _Home2State extends State<Home2> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
       body: GoogleMap(
         initialCameraPosition: _initialCameraPosition,
         myLocationButtonEnabled: false,

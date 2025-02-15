@@ -3,7 +3,7 @@ import 'package:shutt_app/styles/colors.dart';
 import 'package:shutt_app/widgets/NavigationDrawer.dart' as nav;
 
 class Settings extends StatefulWidget {
-  const Settings({Key? key}) : super(key: key);
+  const Settings({super.key});
 
   @override
   State<Settings> createState() => _SettingsState();

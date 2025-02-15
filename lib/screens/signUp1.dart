@@ -13,7 +13,7 @@ import '../providers/authProvider.dart';
 import '../providers/mapProvider.dart';
 
 class SignUp1 extends StatefulWidget {
-  const SignUp1({Key? key}) : super(key: key);
+  const SignUp1({super.key});
 
   @override
   State<SignUp1> createState() => _SignUp1State();
@@ -79,15 +79,15 @@ class _SignUp1State extends State<SignUp1> {
                           Provider.of<MapProvider>(context, listen: false)
                               .userID = "fgDwVf05CrUA5SlHrrNloY82vrg1";
                         } else {
-                          final FirebaseAuth _auth = FirebaseAuth.instance;
-                          await _auth
+                          final FirebaseAuth auth = FirebaseAuth.instance;
+                          await auth
                               .verifyPhoneNumber(
                             phoneNumber:
                                 "+233${phoneNumController.text.trim()}",
                             verificationCompleted:
                                 (PhoneAuthCredential credential) async {
                               UserCredential value =
-                                  await _auth.signInWithCredential(credential);
+                                  await auth.signInWithCredential(credential);
                               if (value.user != null) {
                                 print("User Signed in!");
                               }
@@ -102,12 +102,12 @@ class _SignUp1State extends State<SignUp1> {
                                 int? resendToken) async {
                               String smsCode = 'xxxx';
                               AuthProvider.verificationId = verificationId;
-                              print("Verification Id = ${verificationId}");
+                              print("Verification Id = $verificationId");
                               // Create a PhoneAuthCredential with the code
                               PhoneAuthCredential credential = PhoneAuthProvider.credential(verificationId: verificationId, smsCode: smsCode);
 
                               // Sign the user in (or link) with the credential
-                              await _auth.signInWithCredential(credential);
+                              await auth.signInWithCredential(credential);
                             },
                             codeAutoRetrievalTimeout: (String resendToken) {},
                             timeout: const Duration(seconds: 60),

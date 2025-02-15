@@ -84,7 +84,7 @@ class MapProvider with ChangeNotifier {
   LatLng? _center;
   LatLng get center => _center ?? const LatLng(0, 0);
   CameraPosition initialCameraPosition =
-      CameraPosition(target: LatLng(5.6506, -0.1962), zoom: 15.5);
+      const CameraPosition(target: LatLng(5.6506, -0.1962), zoom: 15.5);
 
   String? placeDistance;
 
@@ -107,22 +107,22 @@ class MapProvider with ChangeNotifier {
   }
 
   trackUserLocation() async {
-    bool _serviceEnabled;
-    PermissionStatus _permissionGranted;
-    LocationData _locationData;
+    bool serviceEnabled;
+    PermissionStatus permissionGranted;
+    LocationData locationData;
 
-    _serviceEnabled = await location.serviceEnabled();
-    if (!_serviceEnabled) {
-      _serviceEnabled = await location.requestService();
-      if (!_serviceEnabled) {
+    serviceEnabled = await location.serviceEnabled();
+    if (!serviceEnabled) {
+      serviceEnabled = await location.requestService();
+      if (!serviceEnabled) {
         return;
       }
     }
 
-    _permissionGranted = await location.hasPermission();
-    if (_permissionGranted == PermissionStatus.denied) {
-      _permissionGranted = await location.requestPermission();
-      if (_permissionGranted != PermissionStatus.granted) {
+    permissionGranted = await location.hasPermission();
+    if (permissionGranted == PermissionStatus.denied) {
+      permissionGranted = await location.requestPermission();
+      if (permissionGranted != PermissionStatus.granted) {
         return;
       }
     }
@@ -174,7 +174,7 @@ class MapProvider with ChangeNotifier {
   }
 
   addBusToMap(Bus bus) {
-    LatLng latLng = new LatLng(bus.location.latitude, bus.location.longitude);
+    LatLng latLng = LatLng(bus.location.latitude, bus.location.longitude);
 
     print("Bus icon: $busIcon");
 
@@ -200,7 +200,7 @@ class MapProvider with ChangeNotifier {
   addBusesToMap(List<Bus> buses) {
     // markers = {};
     for (Bus bus in buses) {
-      LatLng latLng = new LatLng(bus.location.latitude, bus.location.longitude);
+      LatLng latLng = LatLng(bus.location.latitude, bus.location.longitude);
 
       Marker newMarker = Marker(
         markerId: MarkerId('${latLng.latitude}-${latLng.longitude}'),
@@ -238,7 +238,7 @@ class MapProvider with ChangeNotifier {
     }
 
     // Defining an ID
-    PolylineId id = PolylineId('poly');
+    PolylineId id = const PolylineId('poly');
 
     // Initializing Polyline
     Polyline polyline = Polyline(
@@ -287,8 +287,8 @@ class MapProvider with ChangeNotifier {
   }
 
   Future<void> gotoLocation(double lat, double long) async {
-    final GoogleMapController _controller = await controller.future;
-    _controller.animateCamera(CameraUpdate.newCameraPosition(CameraPosition(
+    final GoogleMapController controller = await controller.future;
+    controller.animateCamera(CameraUpdate.newCameraPosition(CameraPosition(
       target: LatLng(lat, long),
       zoom: 15,
       tilt: 50.0,
@@ -299,7 +299,7 @@ class MapProvider with ChangeNotifier {
 
   setCustomMapPin(String image) async {
     BitmapDescriptor icon = await BitmapDescriptor.fromAssetImage(
-        ImageConfiguration(devicePixelRatio: 2.5), image);
+        const ImageConfiguration(devicePixelRatio: 2.5), image);
     return icon;
   }
 

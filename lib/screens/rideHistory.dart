@@ -7,7 +7,7 @@ import 'package:shutt_app/widgets/NavigationDrawer.dart' as nav;
 import 'package:shutt_app/widgets/historyCard.dart';
 
 class RideHistory extends StatefulWidget {
-  const RideHistory({Key? key}) : super(key: key);
+  const RideHistory({super.key});
 
   @override
   State<RideHistory> createState() => _SettingsState();
@@ -44,7 +44,7 @@ class _SettingsState extends State<RideHistory> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Ride History"),
+        title: const Text("Ride History"),
         foregroundColor: appColors.green,
         elevation: 0,
         backgroundColor: Colors.transparent,

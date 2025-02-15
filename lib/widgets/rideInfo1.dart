@@ -11,15 +11,14 @@ class RideInfo1 extends StatelessWidget {
   final String busRegistrationNumber;
   final double price;
   const RideInfo1(
-      {Key? key,
+      {super.key,
       required this.promptText,
       required this.promptValue,
       required this.infoText,
       required this.price,
       required this.pickUpPointText,
       required this.dropOffPointText,
-      required this.busRegistrationNumber})
-      : super(key: key);
+      required this.busRegistrationNumber});
 
   @override
   Widget build(BuildContext context) {

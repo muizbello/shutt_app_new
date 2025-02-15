@@ -4,7 +4,7 @@ import 'package:shutt_app/widgets/NavigationDrawer.dart' as nav;
 import 'package:url_launcher/url_launcher.dart';
 
 class About extends StatefulWidget {
-  const About({Key? key}) : super(key: key);
+  const About({super.key});
 
   @override
   State<About> createState() => _SettingsState();
@@ -16,7 +16,7 @@ class _SettingsState extends State<About> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text("About"),
+          title: const Text("About"),
           foregroundColor: appColors.green,
           elevation: 0,
           backgroundColor: Colors.transparent,
@@ -28,7 +28,7 @@ class _SettingsState extends State<About> {
             child: Padding(
               padding: const EdgeInsets.only(left: 16, bottom: 16, right: 16),
               child: Column(children: [
-                Divider(),
+                const Divider(),
                 const SizedBox(
                   height: 16,
                 ),
@@ -103,12 +103,13 @@ ShuttApp was developed by Enactus University of Ghana which is an experiential l
                 ),
                 TextButton(
                     style: ButtonStyle(
-                        padding: MaterialStateProperty.all(EdgeInsets.all(12)),
+                        padding: WidgetStateProperty.all(const EdgeInsets.all(12)),
                         backgroundColor:
-                            MaterialStateProperty.all(appColors.lightGreen)),
+                            WidgetStateProperty.all(appColors.lightGreen)),
                     onPressed: () async {
-                      if (!await launchUrl(_url))
+                      if (!await launchUrl(_url)) {
                         print('Could not launch $_url');
+                      }
                     },
                     child: const Text(
                       "Discover More",

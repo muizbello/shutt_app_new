@@ -3,7 +3,6 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:shutt_app/models/Bus.dart';
 import 'package:shutt_app/models/RideAlt.dart';
 import 'package:shutt_app/models/Stop.dart';
-import 'package:shutt_app/screens/rideHistory.dart';
 
 import '../models/Ride.dart';
 import '../models/BusRoute.dart';

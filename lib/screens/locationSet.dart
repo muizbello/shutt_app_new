@@ -2,13 +2,12 @@ import 'package:awesome_icons/awesome_icons.dart';
 import "package:flutter/material.dart";
 import 'package:shutt_app/services/dbService.dart';
 import 'package:shutt_app/styles/colors.dart';
-import 'package:shutt_app/widgets/customTextField.dart';
 import 'package:provider/provider.dart';
 import 'package:shutt_app/providers/mapProvider.dart';
 import 'package:shutt_app/models/Stop.dart';
 
 class LocationSet extends StatefulWidget {
-  const LocationSet({Key? key}) : super(key: key);
+  const LocationSet({super.key});
 
   @override
   State<LocationSet> createState() => LocationSetState();

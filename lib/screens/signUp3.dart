@@ -1,8 +1,6 @@
 //import 'package:firebase_auth/firebase_auth.dart' as auth;
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:shutt_app/providers/authProvider.dart';
-import 'package:shutt_app/screens/authWrapper.dart';
 import 'package:shutt_app/widgets/customTextField.dart';
 import 'package:shutt_app/widgets/greenButton.dart';
 import 'package:shutt_app/widgets/headingText.dart';
@@ -11,7 +9,7 @@ import 'package:shutt_app/styles/colors.dart';
 import '../services/authService.dart';
 
 class SignUp3 extends StatefulWidget {
-  const SignUp3({Key? key}) : super(key: key);
+  const SignUp3({super.key});
 
   @override
   State<SignUp3> createState() => _SignUp3State();

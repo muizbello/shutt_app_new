@@ -8,13 +8,12 @@ class RideInfoItem extends StatelessWidget {
   final Color valueColor;
   final FontWeight valueWeight;
   const RideInfoItem(
-      {Key? key,
+      {super.key,
       required this.keyText,
       required this.valueText,
       this.valueColor = appColors.green,
       this.valueSize = 28,
-      this.valueWeight = FontWeight.normal})
-      : super(key: key);
+      this.valueWeight = FontWeight.normal});
 
   @override
   Widget build(BuildContext context) {

@@ -3,7 +3,7 @@ import 'package:shutt_app/styles/colors.dart';
 import 'package:shutt_app/widgets/NavigationDrawer.dart' as nav;
 
 class Support extends StatefulWidget {
-  const Support({Key? key}) : super(key: key);
+  const Support({super.key});
 
   @override
   State<Support> createState() => _SettingsState();
@@ -14,7 +14,7 @@ class _SettingsState extends State<Support> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Support"),
+        title: const Text("Support"),
         foregroundColor: appColors.darkGreen,
         elevation: 0,
         backgroundColor: Colors.transparent,

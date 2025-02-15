@@ -5,8 +5,7 @@ class HeadingText extends StatelessWidget {
   final String text;
   final TextAlign alignment;
   const HeadingText(
-      {Key? key, required this.text, this.alignment = TextAlign.center})
-      : super(key: key);
+      {super.key, required this.text, this.alignment = TextAlign.center});
 
   @override
   Widget build(BuildContext context) {

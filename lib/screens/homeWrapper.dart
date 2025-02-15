@@ -5,7 +5,7 @@ import 'package:shutt_app/screens/home.dart';
 import 'package:shutt_app/screens/rateRide.dart';
 
 class HomeWrapper extends StatelessWidget {
-  const HomeWrapper({Key? key}) : super(key: key);
+  const HomeWrapper({super.key});
 
   @override
   Widget build(BuildContext context) {

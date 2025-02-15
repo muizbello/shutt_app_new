@@ -4,8 +4,7 @@ import 'package:shutt_app/styles/colors.dart';
 class greenButton extends StatelessWidget {
   final Function onPressed;
   final String label;
-  const greenButton({Key? key, required this.label, required this.onPressed})
-      : super(key: key);
+  const greenButton({super.key, required this.label, required this.onPressed});
 
   @override
   Widget build(BuildContext context) {

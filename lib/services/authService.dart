@@ -1,7 +1,4 @@
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:shutt_app/models/User.dart';
-import 'package:provider/provider.dart';
-import 'package:shutt_app/providers/authProvider.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 
 class AuthService {
@@ -55,7 +52,7 @@ class AuthService {
         codeSent: (String verificationId, int? resendToken) async {
           String smsCode = 'xxxx';
           verificationID = verificationId;
-          print("Verification Id = ${verificationId}");
+          print("Verification Id = $verificationId");
         },
         codeAutoRetrievalTimeout: (String resendToken) {},
         timeout: const Duration(seconds: 60),
@@ -64,6 +61,7 @@ class AuthService {
       print(e.toString());
       return "";
     }
+    return null;
   }
 
   // Sign in with phone

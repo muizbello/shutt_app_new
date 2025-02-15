@@ -10,7 +10,7 @@ import 'package:shutt_app/screens/signUp3.dart';
 import '../providers/authProvider.dart' as custom_auth;
 
 class AuthWrapper extends StatelessWidget {
-  const AuthWrapper({Key? key}) : super(key: key);
+  const AuthWrapper({super.key});
 
   @override
   Widget build(BuildContext context) {

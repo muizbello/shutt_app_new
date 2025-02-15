@@ -12,7 +12,7 @@ import 'package:provider/provider.dart';
 import '../services/authService.dart';
 
 class NavigationDrawer extends StatefulWidget {
-  const NavigationDrawer({Key? key}) : super(key: key);
+  const NavigationDrawer({super.key});
 
   @override
   State<NavigationDrawer> createState() => _NavigationDrawerState();

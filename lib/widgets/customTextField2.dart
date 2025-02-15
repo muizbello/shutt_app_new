@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:shutt_app/styles/colors.dart';
-import 'package:shutt_app/screens/locationSet.dart';
 
 class CustomTextField2 extends StatelessWidget {
   final TextEditingController textController;
@@ -11,15 +10,14 @@ class CustomTextField2 extends StatelessWidget {
   final bool hideText;
   final bool readOnly;
   const CustomTextField2(
-      {Key? key,
+      {super.key,
       required this.textController,
       required this.hintText,
       required this.onPressed,
       this.readOnly = false,
       this.keyboardType = TextInputType.text,
       this.hideText = false,
-      this.textIcon})
-      : super(key: key);
+      this.textIcon});
 
   @override
   Widget build(BuildContext context) {

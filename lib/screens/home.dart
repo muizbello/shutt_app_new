@@ -14,7 +14,7 @@ import '../models/Bus.dart';
 import '../services/dbService.dart';
 
 class Home extends StatefulWidget {
-  const Home({Key? key}) : super(key: key);
+  const Home({super.key});
 
   @override
   State<Home> createState() => _HomeState();
@@ -48,29 +48,29 @@ class _HomeState extends State<Home> {
     await Geolocator.requestPermission().then((value){
     }).onError((error, stackTrace) async {
       await Geolocator.requestPermission();
-      print("ERROR"+error.toString());
+      print("ERROR$error");
     });
     return await Geolocator.getCurrentPosition();
   }
 
   getUserLocation() async {
     try {
-      bool _serviceEnabled;
-      PermissionStatus _permissionGranted;
-      LocationData _locationData;
+      bool serviceEnabled;
+      PermissionStatus permissionGranted;
+      LocationData locationData;
 
-      _serviceEnabled = await location.serviceEnabled();
-      if (!_serviceEnabled) {
-        _serviceEnabled = await location.requestService();
-        if (!_serviceEnabled) {
+      serviceEnabled = await location.serviceEnabled();
+      if (!serviceEnabled) {
+        serviceEnabled = await location.requestService();
+        if (!serviceEnabled) {
           return;
         }
       }
 
-      _permissionGranted = await location.hasPermission();
-      if (_permissionGranted == PermissionStatus.denied) {
-        _permissionGranted = await location.requestPermission();
-        if (_permissionGranted != PermissionStatus.granted) {
+      permissionGranted = await location.hasPermission();
+      if (permissionGranted == PermissionStatus.denied) {
+        permissionGranted = await location.requestPermission();
+        if (permissionGranted != PermissionStatus.granted) {
           return;
         }
       }

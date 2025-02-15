@@ -8,12 +8,11 @@ class HistoryCard extends StatelessWidget {
   final String dropoff;
   final String status;
   const HistoryCard(
-      {Key? key,
+      {super.key,
       required this.date,
       required this.pickup,
       required this.dropoff,
-      required this.status})
-      : super(key: key);
+      required this.status});
 
   @override
   Widget build(BuildContext context) {

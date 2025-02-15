@@ -12,11 +12,10 @@ class RideOptions extends StatelessWidget {
   final TextEditingController dropoffController;
   final Function goPressed;
   const RideOptions(
-      {Key? key,
+      {super.key,
       required this.pickupController,
       required this.goPressed,
-      required this.dropoffController})
-      : super(key: key);
+      required this.dropoffController});
 
   @override
   Widget build(BuildContext context) {
@@ -102,7 +101,7 @@ class RideOptions extends StatelessWidget {
                   child: TextButton(
                     style: ButtonStyle(
                         backgroundColor:
-                            MaterialStateProperty.all(appColors.appWhite)),
+                            WidgetStateProperty.all(appColors.appWhite)),
                     onPressed: () {},
                     child: const Padding(
                       padding: EdgeInsets.all(8.0),
@@ -142,7 +141,7 @@ class RideOptions extends StatelessWidget {
                     child: TextButton(
                       style: ButtonStyle(
                           backgroundColor:
-                              MaterialStateProperty.all(appColors.appWhite)),
+                              WidgetStateProperty.all(appColors.appWhite)),
                       onPressed: () {
                         goPressed();
                       },
@@ -206,7 +205,7 @@ class RideOptions extends StatelessWidget {
 
 class BookPrivateButton extends StatelessWidget {
   final VoidCallback callback;
-  const BookPrivateButton({Key? key, required this.callback}) : super(key: key);
+  const BookPrivateButton({super.key, required this.callback});
 
   @override
   Widget build(BuildContext context) {

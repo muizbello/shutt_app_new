@@ -1,21 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:shutt_app/providers/mapProvider.dart';
-import 'package:shutt_app/services/dbService.dart';
 import 'package:shutt_app/styles/colors.dart';
 import 'package:shutt_app/widgets/greenButton.dart';
 import 'package:shutt_app/widgets/headingText.dart' as headingText;
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 
 class RateRide extends StatefulWidget {
-  const RateRide({Key? key}) : super(key: key);
+  const RateRide({super.key});
 
   @override
   State<RateRide> createState() => _RateRideState();
 }
 
 class _RateRideState extends State<RateRide> {
-  double _ratingValue = 0;
+  final double _ratingValue = 0;
   TextEditingController commentController = TextEditingController();
   int maxLines = 7;
 
@@ -79,7 +78,7 @@ class _RateRideState extends State<RateRide> {
                     const SizedBox(
                       height: 24,
                     ),
-                    Container(
+                    SizedBox(
                       height: maxLines * 24,
                       child: TextField(
                         controller: commentController,
