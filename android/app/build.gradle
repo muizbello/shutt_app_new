@@ -6,7 +6,7 @@ plugins {
 }
 
 android {
-    namespace "com.example.shutt_app"
+    namespace "com.example.shutt_app_new"
 
     compileSdk = flutter.compileSdkVersion
     ndkVersion = flutter.ndkVersion
